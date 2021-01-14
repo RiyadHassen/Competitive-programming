@@ -6,12 +6,16 @@ Created on Tue Jan 12 18:39:55 2021
 """
 
 def fibiter(n):
-     i=0
+     i=1
      fib = 0
+     a1 = 1
+     a2 = 1
      while i <= n:
-         fib = fib + i
+         fib =a1 + a2
+         a1= a2
+         a2 = fib
          i+=1
          
      return fib
-print(fibiter(5))
+print(fibiter(3))
     
