@@ -20,4 +20,18 @@ class Solution:
     def flip(self,nums,index):
         return nums[:index][::-1] + nums[index:]
     
-        
+
+class Solution2:
+    def pancakeSort(self, arr: List[int]) -> List[int]:
+        result = []
+        for i in range(len(arr),0,-1):
+            for j in range(1,i):
+                if arr[j]==i:
+                    result.append(j+1)
+                    arr = self.flip(arr,j+1)
+                    break
+            arr = self.flip(arr,i)
+            result.append(i)
+        return result
+    def flip(self,nums,index):
+        return nums[:index][::-1] + nums[index:]
