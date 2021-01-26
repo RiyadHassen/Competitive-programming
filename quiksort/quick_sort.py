@@ -19,9 +19,6 @@ def quick_sort(ar):
     return ar
     
         
-        
-        
-
 
 # Complete the quickSort function below.
 def partition(arr):
