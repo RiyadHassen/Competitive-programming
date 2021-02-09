@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Feb  9 23:19:06 2021
+
+@author: riyad
+"""
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -23,4 +30,10 @@ class Solution:
         result.left = self.add_node(left_nums, result.left)
         result.right = self.add_node(right_nums, result.right)
         return result
+        
+        
+        
+        
+            
+        
         
