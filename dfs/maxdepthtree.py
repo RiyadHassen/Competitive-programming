@@ -29,3 +29,8 @@ class Solution:
             depth=max(depth,child)
         #depth+= max(depth,child)
         return depth  
+ |      sep
+ |        The delimiter according which to split the string.
+ |        None (the default value) means split according to any whitespace,
+ |        and discard empty strings from the result.
+ |      maxsplit
