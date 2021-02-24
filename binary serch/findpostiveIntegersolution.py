@@ -1,28 +1,32 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+"""
+   This is the custom function interface.
+   You should not implement it, or speculate about its implementation
+   class CustomFunction:
+       # Returns f(x, y) for any given positive integers x and y.
+       # Note that f(x, y) is increasing with respect to both x and y.
+       # i.e. f(x, y) < f(x + 1, y), f(x, y) < f(x, y + 1)
+       def f(self, x, y):
+  
+"""
+
 class Solution:
-    def minDiffInBST(self, root: TreeNode) -> int:
-        #result =[float('inf')]
-        max_num = float('inf')
-        min_num = -float('inf')
-        return self.min_diff(root,min_num,max_num)
-        #return result[0]
-    def min_diff(self,root,min_num,max_num):
-        if not root:
-            return float('inf')
-        mini = float('inf')
-        if min_num!=-float('inf'):
-            mini = min(root.val-min_num,mini)
-        if max_num!=float('inf'):
-            mini =min(max_num-root.val,mini)
-        if not root.left and not root.right:
-            return mini
-        left =self.min_diff(root.left,min_num,root.val)
-        right =self.min_diff(root.right,root.val,max_num)
-        return min(left,right,mini)
-        #print(min_num[0])
-        # return min_num[0] 
+    def findSolution(self, customfunction: 'CustomFunction', z: int) -> List[List[int]]:
+        result = []
+        for n in range(1,z+1):
+            start = 1
+            end = z
+            while (start <= end):
+                
+                middle = start + (end-start)//2
+                if customfunction.f(n,middle) == z:
+                    result.append([n,middle])
+                    break
+                elif customfunction.f(n,middle) > z:
+                    end = middle -1 
+                else :
+                     start = middle +1
+                    
+        return result
+                    
+                    
+                    
