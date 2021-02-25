@@ -7,6 +7,8 @@ Created on Tue Feb 23 22:35:38 2021
 
 #!/bin/python3
 
+#!/bin/python3
+
 import math
 import os
 import random
@@ -17,12 +19,8 @@ from collections import Counter
 def isValid(s):
     freq = Counter(s)
     setfreq =Counter(freq.values())
-    print(freq)
-    print(setfreq)
     if len(setfreq)==1:
         return 'YES'
-    elif len(setfreq) > 2:
-        return 'NO'
     elif len(setfreq) == 2:
         first, second = setfreq.keys()
         if setfreq[first]==1 and  (first-1 ==0 or first-1==second):
