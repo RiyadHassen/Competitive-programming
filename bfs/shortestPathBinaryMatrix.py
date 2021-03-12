@@ -1,3 +1,4 @@
+from collections import deque
 class Solution:
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
         queue,clear_path,visited= deque([]),0,set()
