@@ -24,3 +24,15 @@ class Solution:
                 visited.add(ele)
                 level= self.dfs(graph[ele],visited,graph)+1
         return level
+    
+ max_profit,buy=0, -1
+        sell = -1
+        isSell =False
+        for i in range(len(prices)-1):
+            if buy==-1:
+                buy = prices[i]
+            else:
+                if price[i+1]>buy:
+                    isSell = True
+                elif prices[i+1] > buy:
+                    sell = price[i]
