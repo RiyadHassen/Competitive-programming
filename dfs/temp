@@ -1,0 +1,10 @@
+class Solution:
+    def minReorder(self, n: int, connections: List[List[int]]) -> int:
+        incoming, outgoing = defaultdict(list),defaultdict(list)
+        
+        for u,v in connections:
+            incoming[u].append(v)
+            outgoing[v].append(u)
+        print(incoming)
+        print(outgoing)
+        
